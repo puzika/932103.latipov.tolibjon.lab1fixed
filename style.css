@@ -1,0 +1,143 @@
+:root {
+  --font-size: 1.6rem;
+  --color-white: #fff;
+  --color-green: #008000;
+  --color-blue: #0000ff;
+  --color-red: #ff0000;
+  --color-highlighted: #00ffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size);
+  color: var(--color-white);
+}
+
+.header,
+.footer {
+  padding: 1rem 0;
+  background-color: var(--color-green);
+}
+.header__text,
+.footer__text {
+  text-align: center;
+}
+
+.header__text {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 33.3%;
+  background-color: var(--color-blue);
+  padding: 1rem 2.5rem;
+}
+.content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.content__image {
+  width: 10rem;
+  height: 10rem;
+  border: 0.5rem solid #fff;
+  float: left;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  margin: 0 2rem 3rem 0;
+}
+.content__heading--main {
+  margin: 1rem 0 2rem;
+}
+.content__heading--secondary > span {
+  color: var(--color-red);
+}
+.content__heading--tertiary {
+  margin-bottom: 1rem;
+}
+.content__link {
+  text-align: center;
+  margin: 1rem 0;
+}
+.content__link > a:link, .content__link > a:visited {
+  color: var(--color-red);
+}
+
+.list {
+  margin: 1.5rem 3rem;
+}
+.list__item {
+  text-transform: capitalize;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.list__item > span {
+  letter-spacing: 0.5rem;
+  color: var(--color-highlighted);
+}
+.list__item--italic {
+  font-style: italic;
+}
+.list__item--bold {
+  font-weight: bold;
+}
+.list__item--underline {
+  text-decoration: underline;
+}
+.list__item--dashed {
+  text-decoration: line-through;
+  transform: translateY(50%);
+}
+.list--2 {
+  list-style: none;
+  margin: 0;
+}
+
+.floated-right {
+  float: right;
+}
+
+.floated-left {
+  float: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 4rem);
+  grid-template-rows: repeat(3, 3rem);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 0.15rem outset var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.grid__cell {
+  border: inherit;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.grid__cell--green {
+  grid-area: 1/1/3/2;
+  background-color: var(--color-green);
+}
+.grid__cell--red {
+  grid-area: 3/2/4/4;
+  background-color: var(--color-red);
+}
+
+/*# sourceMappingURL=style.css.map */
